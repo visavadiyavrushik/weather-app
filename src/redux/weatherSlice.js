@@ -4,15 +4,18 @@ export const weatherSlice = createSlice({
   name: "weather",
   initialState: {
     searchHistory: [],
+    searchedCity: {},
   },
   reducers: {
     addToSearchHistory: (state, action) => {
-      console.log("action: ", state, action);
       state.searchHistory = [...state.searchHistory, action.payload];
+    },
+    getsearchedCity: (state, action) => {
+      state.searchedCity = action.payload;
     },
   },
 });
 
-export const { addToSearchHistory } = weatherSlice.actions;
+export const { addToSearchHistory, getsearchedCity } = weatherSlice.actions;
 
 export default weatherSlice.reducer;
