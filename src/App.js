@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "./components/SearchBar";
 import WeatherDisplay from "./components/WeatherDisplay";
 import { Container } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
