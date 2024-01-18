@@ -15,9 +15,13 @@ const WeatherDisplay = () => {
           <ListGroupItem key={index}>{city}</ListGroupItem>
         ))}
       </ListGroup>
-      <h1>City : {searchedCity?.name}</h1>
-      <h2>{searchedCity?.main?.temp}</h2>
-      <h2>humidity :{searchedCity?.main?.humidity}</h2>
+      <div className="weather">
+        <h1>City : {searchedCity?.name}</h1>
+        <h2>{searchedCity?.main?.temp}</h2>
+        <div className="more-info">
+          <h2>humidity :{searchedCity?.main?.humidity}</h2>
+        </div>
+      </div>
     </div>
   );
 };
